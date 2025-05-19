@@ -1,0 +1,127 @@
+/* Container principal */
+.register-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #e0f2fe, #fef9c3);
+  padding: 1rem;
+}
+
+/* Container do formulário */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2.5rem 2rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Animação suave de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Título do formulário */
+.form-title {
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #0f172a;
+  font-weight: 600;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Campos de entrada */
+input {
+  padding: 0.9rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Botão de cadastro */
+.register-button {
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #3b82f6;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  margin-top: 0.5rem;
+}
+
+.register-button:hover,
+.register-button:focus {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* Container do link de login */
+.login-link {
+  text-align: center;
+  margin-top: 1.2rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+/* Botão/link de login */
+.login-redirect-button {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  cursor: pointer;
+  font-size: inherit;
+  text-decoration: underline;
+  margin-left: 0.25rem;
+  padding: 0;
+  transition: color 0.3s;
+}
+
+.login-redirect-button:hover {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+/* Responsividade extra para mobile */
+@media (max-width: 400px) {
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  input,
+  .register-button {
+    font-size: 0.95rem;
+  }
+}
